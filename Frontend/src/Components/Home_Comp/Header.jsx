@@ -13,7 +13,7 @@ function Header () {
             <img className="w-[150px] filter invert brightness-0 " src={iRisehupLogo} alt="" />
             <ul className="flex gap-10 text-xl font-semibold text-white">
                 <Link> <li> About </li> </Link>
-                <Link> <li> Ecosystem </li> </Link>
+                <Link to="/ecosystem"> <li> Ecosystem </li> </Link>
                 <Link> <li> Areas We Focus </li> </Link>
                 <Link> <li> Community </li> </Link>
                 <Link> <li> Startups </li> </Link>
