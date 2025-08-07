@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import iRisehupLogo  from "../../Images/HomeComp-Images/iRisehubLogo.png"
 import { Link } from "react-router-dom";
 // Social Media icons 
@@ -7,13 +8,14 @@ import { IoLogoInstagram } from "react-icons/io";
 import { FaFacebookF } from "react-icons/fa";
 import { useState } from "react";
 
+
 function Header () {
     const [isIconHover, setIsIconHover] = useState(false)
-    return <div className="w-full bg-transparent z-10 absolute h-[90px] flex justify-between items-center px-[30px]">
+    return <div className="w-full bg-transparent z-10 absolute  h-[90px] flex justify-between items-center px-[30px]">
             <img className="w-[150px] filter invert brightness-0 " src={iRisehupLogo} alt="" />
             <ul className="flex gap-10 text-xl font-semibold text-white">
                 <Link> <li> About </li> </Link>
-                <Link> <li> Ecosystem </li> </Link>
+               <Link to="/ecosystem"> <li> Ecosystem </li> </Link>
                 <Link> <li> Areas We Focus </li> </Link>
                 <Link> <li> Community </li> </Link>
                 <Link> <li> Startups </li> </Link>

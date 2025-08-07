@@ -13,7 +13,7 @@ import Hero10 from "../../Images/HomeComp-Images/Hero10.jpg"
 import { HiArrowSmRight } from "react-icons/hi";
 
 function HeroSection (){
-    return <div className="w-full flex items-center flex-col h-[700px] absolute top-0">
+    return <div className="w-full flex items-center flex-col h-[700px] relative top-0">
         <img className="w-full h-full object-cover" src={Hero1} alt="" />
         <div className="w-[600px] z-10 absolute top-40">
             <h1 className="text-[80px] text-white font-bold leading-[100px] "> Pioneering next industries  </h1>

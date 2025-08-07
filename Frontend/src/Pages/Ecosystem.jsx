@@ -2,6 +2,7 @@
 
 import React from "react";
 import HeroSection from "../Components/Home_Comp/HeroSection";
+import Header from "../Components/Home_Comp/Header";
 
 function Ecosystem() {
   return (
@@ -9,14 +10,16 @@ function Ecosystem() {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* Qeybo kale oo aad dooneyso inaad ku darto */}
-      <section>
-        <h2>Our Ecosystem</h2>
-        <p>
-          At iRiseHub, we are building a dynamic and innovative ecosystem
-          that connects startups, tech talents, investors, and institutions.
+      {/* Header */}
+      <Header />
+
+      {/* Text under the Header */}
+      <div style={{ padding: "20px", maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
+        <p style={{ fontSize: "18px", lineHeight: "1.6" }}>
+          We are building a diversified portfolio of over 30 ventures across three strategic sectors. <br />
+          Each business is embedded in a connected ecosystem to maximize innovation, efficiency, and sustainability.
         </p>
-      </section>
+      </div>
     </div>
   );
 }
