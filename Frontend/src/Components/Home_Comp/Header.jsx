@@ -7,6 +7,7 @@ import { IoLogoInstagram } from "react-icons/io";
 import { FaFacebookF } from "react-icons/fa";
 import { useState } from "react";
 
+
 function Header () {
     const [isIconHover, setIsIconHover] = useState(false)
     return <div className="w-full bg-transparent z-10 absolute h-[90px] flex justify-between items-center px-[30px]">

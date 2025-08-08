@@ -38,7 +38,7 @@ function HeroSection (){
             </button>
         </div>
         {/* Mirror sec */}
-        <div style={{ transform: `rotate(${ClockLikeRotate}deg) skewX(-39deg)` }} class="relative w-[230px] h-[230px] duration-100 skew-x-[-39deg] -mt-100 bg-white/10 backdrop-blur-[5px] transform origin-center animate-clocktick">
+        <div style={{ transform:  `rotate(${ClockLikeRotate}deg) skewX(-39deg)` }} class="relative w-[230px] h-[230px] duration-100 skew-x-[-39deg] -mt-100 bg-white/10 backdrop-blur-[5px] transform origin-center animate-clocktick">
         </div>
         {/* <div class="relative w-[230px] h-[230px] skew-x-[-39deg] -mt-100 bg-white/10 backdrop-blur-[5px] transform origin-center animate-clocktick">
         </div> */}
