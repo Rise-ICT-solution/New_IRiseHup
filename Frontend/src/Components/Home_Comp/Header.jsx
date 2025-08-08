@@ -14,7 +14,7 @@ function Header () {
             <ul className="flex gap-10 text-xl font-semibold text-white">
                 <Link> <li> About </li> </Link>
                 <Link to="/ecosystem"> <li> Ecosystem </li> </Link>
-                <Link> <li> Areas We Focus </li> </Link>
+                <Link to="/sustain"> <li> Areas We Focus </li> </Link>
                 <Link> <li> Community </li> </Link>
                 <Link> <li> Startups </li> </Link>
             </ul>
