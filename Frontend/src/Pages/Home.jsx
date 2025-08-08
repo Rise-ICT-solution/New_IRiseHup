@@ -1,4 +1,5 @@
-import Footer from "../Components/Home_Comp/Footer"
+import BottomPage from "../Components/Home_Comp/BottomPage"
+import Footer from "../Components/Footer"
 import Header from "../Components/Home_Comp/Header"
 import HeroSection from "../Components/Home_Comp/HeroSection"
 import NewsEvents from "../Components/Home_Comp/NewsEvents"
@@ -17,6 +18,7 @@ function Home (){
         <Section4 />
         <NewsEvents />
         <Footer />
+        <BottomPage />
     </div>
 }
 export default Home
