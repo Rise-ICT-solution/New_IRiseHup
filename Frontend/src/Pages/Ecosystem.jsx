@@ -1,3 +1,15 @@
+// <<<<<<< HEAD
+import Footer from "../Components/Footer"
+import BottomPage from "../Components/Home_Comp/BottomPage"
+import PublicHeroSection from "../Components/PublicHeroSection"
+
+// function Ecosystem (){
+    // return <div>
+        {/* <PublicHeroSection />
+        <h1> Ecosystem</h1>
+        <Footer />
+        <BottomPage /> */}
+// =======
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect, useRef } from "react";
 import HeroSection from "../Components/Home_Comp/HeroSection";
@@ -89,12 +101,11 @@ function Ecosystem() {
 
   return (
     <div className="relative">
-      <Header />
-      <HeroSection />
+      <PublicHeroSection />
 
       {/* Qoraalka sare */}
-      <div className="py-10 text-black text-center px-4">
-        <p className="text-xl md:text-2xl font-semibold leading-relaxed max-w-3xl mx-auto">
+      <div className="py-10 text-black  px-4">
+        <p className="text-2xl md:text-2xl font-semibold  max-w-3xl mx-auto">
           We are building a diversified portfolio of over 30 ventures across
           three strategic sectors. Each business is embedded in a connected
           ecosystem to maximize innovation, efficiency, and sustainability.
@@ -187,6 +198,8 @@ function Ecosystem() {
           ))}
         </div>
       </div>
+      <Footer />
+      <BottomPage />
     </div>
   );
 }
