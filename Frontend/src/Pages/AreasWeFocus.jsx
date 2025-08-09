@@ -1,5 +1,8 @@
 import React, { useEffect, useRef } from 'react'
 import { HiArrowSmRight } from "react-icons/hi";
+import { Link } from 'react-router-dom';
+import Footer from '../Components/Footer';
+import Header from '../Components/Home_Comp/Header';
 
 function AreasWeFocus() {
   // Intersection Observer for scroll animations
@@ -70,47 +73,15 @@ function AreasWeFocus() {
           transform: translateX(-100%);
         }
       `}</style>
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
-        <div className="container mx-auto px-12 py-6 flex items-center justify-between">
-                     <div className="flex items-center space-x-3">
-             <img 
-               src="/src/Images/HomeComp-Images/iRisehubLogo.png" 
-               alt="IRISEHUB Logo" 
-               className="h-10 w-auto"
-             />
-           </div>
-          <nav className="hidden md:flex items-center space-x-10">
-            <a href="#" className="text-white/70 hover:text-white transition-colors text-lg">About</a>
-            <a href="#" className="text-white/70 hover:text-white transition-colors text-lg">Business</a>
-            <a href="#" className="text-white/70 hover:text-white transition-colors text-lg">Expertise</a>
-            <a href="#" className="text-white font-bold text-lg">Sustainability</a>
-            <a href="#" className="text-white/70 hover:text-white transition-colors text-lg">Careers</a>
-            <a href="#" className="text-white/70 hover:text-white transition-colors text-lg">Contact</a>
-          </nav>
-                     <div className="flex items-center space-x-5">
-             <div className="w-10 h-10 bg-white/30 rounded-full flex items-center justify-center">
-               <span className="text-white text-sm font-medium">in</span>
-             </div>
-             <div className="w-10 h-10 bg-white/30 rounded-full flex items-center justify-center">
-               <span className="text-white text-sm font-medium">X</span>
-             </div>
-             <div className="w-10 h-10 bg-white/30 rounded-full flex items-center justify-center">
-               <span className="text-white text-sm">📷</span>
-             </div>
-             <div className="w-10 h-10 bg-white/30 rounded-full flex items-center justify-center">
-               <span className="text-white text-sm">▶</span>
-             </div>
-           </div>
-        </div>
-      </header>
+      {/* Header Component */}
+      <Header />
 
       {/* Hero Section */}
       <section className="relative h-screen bg-gradient-to-br from-orange-500 via-yellow-400 to-blue-600">
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="relative h-full flex items-center justify-center">
-          <h1 className="text-9xl font-bold text-white text-center tracking-tight">
-            Sustainability
+          <h1 className="text-9xl font-bold text-white text-center tracking-tight font-roboto">
+            Areas We Focus
           </h1>
         </div>
       </section>
@@ -120,10 +91,10 @@ function AreasWeFocus() {
         <div className="relative h-full flex">
                      {/* Left Side - Heading */}
            <div className="w-1/2 flex items-start pt-20">
-             <h2 className="text-7xl font-bold text-gray-300 leading-[0.85] animate-on-scroll">
+             <h2 className="text-7xl font-bold text-gray-300 leading-[0.85] animate-on-scroll font-roboto">
                Pioneering Next Industries
                <br />
-               Sustainably
+               Areas We Focus
              </h2>
            </div>
 
@@ -131,14 +102,14 @@ function AreasWeFocus() {
           <div className="w-1/2 flex flex-col justify-center space-y-8">
                          {/* Main Statement */}
              <div className="max-w-lg animate-on-scroll">
-               <p className="text-2xl font-bold text-black leading-relaxed">
+               <p className="text-2xl font-bold text-black leading-relaxed font-roboto">
                  At IRISEHUB, sustainability is a way of thinking and acting - rooted in responsibility, driven by purpose, and focused on building a better tomorrow.
                </p>
              </div>
 
              {/* Vision Statement */}
              <div className="max-w-lg animate-on-scroll">
-               <p className="text-lg font-normal text-black leading-relaxed">
+               <p className="text-lg font-normal text-black leading-relaxed font-roboto">
                  Our vision ensures that IRISEHUB and its ventures align with the highest Environmental, Social, and Governance (ESG) standards, driving long-term value and sustainable growth.
                </p>
              </div>
@@ -163,14 +134,14 @@ function AreasWeFocus() {
            
                        {/* Text Content Section */}
             <div className="max-w-4xl mx-auto text-left animate-on-scroll">
-              <h3 className="text-3xl font-bold text-black mb-8">
+              <h3 className="text-3xl font-bold text-black mb-8 font-roboto">
                 Designing resilience and Value from Day One
               </h3>
               <div className="space-y-6">
-                <p className="text-lg text-black leading-relaxed">
+                <p className="text-lg text-black leading-relaxed font-roboto">
                   At IRISEHUB, our general derisking process integrates sustainability from the earliest stages of venture development. Through our "sustainable by design" approach we integrate ESG principles into every stage of business development.
                 </p>
-                <p className="text-lg text-black leading-relaxed">
+                <p className="text-lg text-black leading-relaxed font-roboto">
                   By incorporating ESG criteria into due diligence, risk assessment, and decision-making frameworks, we proactively address regulatory, environmental, and social risks while unlocking opportunities and responding pragmatically to our stakeholders' expectations.
                 </p>
               </div>
@@ -183,7 +154,7 @@ function AreasWeFocus() {
           <div className="container mx-auto max-w-6xl">
                          {/* Main Title */}
              <div className="text-center mb-16 animate-on-scroll">
-               <h2 className="text-4xl font-bold text-black">
+               <h2 className="text-4xl font-bold text-black font-roboto">
                  Our 4 Strategic Sustainability Pillars:
                </h2>
              </div>
@@ -208,19 +179,19 @@ function AreasWeFocus() {
                <ul className="space-y-4">
                  <li className="flex items-start">
                    <span className="text-black mr-3 mt-2">•</span>
-                   <span className="text-lg text-black leading-relaxed">
+                   <span className="text-lg text-black leading-relaxed font-roboto">
                      Address urgency on both adaptation and mitigation of climate change.
                    </span>
                  </li>
                  <li className="flex items-start">
                    <span className="text-black mr-3 mt-2">•</span>
-                   <span className="text-lg text-black leading-relaxed">
+                   <span className="text-lg text-black leading-relaxed font-roboto">
                      Champion transition to Net-Zero and amplify low-carbon solutions.
                    </span>
                  </li>
                  <li className="flex items-start">
                    <span className="text-black mr-3 mt-2">•</span>
-                   <span className="text-lg text-black leading-relaxed">
+                   <span className="text-lg text-black leading-relaxed font-roboto">
                      Proactively manage our climate impact through GHG (Greenhouse Gases) mitigation, renewable energies and non-conventional water resources.
                    </span>
                  </li>
@@ -252,25 +223,25 @@ function AreasWeFocus() {
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <span className="text-black mr-3 mt-2">•</span>
-                    <span className="text-lg text-black leading-relaxed">
+                    <span className="text-lg text-black leading-relaxed font-roboto">
                       Integrate circular economy principles within project design.
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-black mr-3 mt-2">•</span>
-                    <span className="text-lg text-black leading-relaxed">
+                    <span className="text-lg text-black leading-relaxed font-roboto">
                       Innovate to use water and energy more efficiently.
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-black mr-3 mt-2">•</span>
-                    <span className="text-lg text-black leading-relaxed">
+                    <span className="text-lg text-black leading-relaxed font-roboto">
                       Transform industrial waste into valuable resources through innovative circular economy practices.
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-black mr-3 mt-2">•</span>
-                    <span className="text-lg text-black leading-relaxed">
+                    <span className="text-lg text-black leading-relaxed font-roboto">
                       Minimize environmental impact by maximizing the reuse and recovery of resources in closed-loop solutions.
                     </span>
                   </li>
@@ -296,19 +267,19 @@ function AreasWeFocus() {
               
                              {/* Content Section */}
                <div className="max-w-4xl mx-auto text-left animate-on-scroll">
-                 <h3 className="text-2xl font-bold text-black mb-6">
+                 <h3 className="text-2xl font-bold text-black mb-6 font-roboto">
                    Act for Communities: Positive Community Impact
                  </h3>
                  <ul className="space-y-4">
                    <li className="flex items-start">
                      <span className="text-black mr-3 mt-2">•</span>
-                     <span className="text-lg text-black leading-relaxed">
+                     <span className="text-lg text-black leading-relaxed font-roboto">
                        Invest actively in initiatives supporting sustainable economic opportunities for communities.
                      </span>
                    </li>
                    <li className="flex items-start">
                      <span className="text-black mr-3 mt-2">•</span>
-                     <span className="text-lg text-black leading-relaxed">
+                     <span className="text-lg text-black leading-relaxed font-roboto">
                        Champion human rights, community engagement, and inclusive local growth.
                      </span>
                    </li>
@@ -334,31 +305,31 @@ function AreasWeFocus() {
               
                              {/* Content Section */}
                <div className="max-w-4xl mx-auto text-left animate-on-scroll">
-                 <h3 className="text-2xl font-bold text-black mb-6">
+                 <h3 className="text-2xl font-bold text-black mb-6 font-roboto">
                    Act for People: Serve our People
                  </h3>
                  <ul className="space-y-4">
                    <li className="flex items-start">
                      <span className="text-black mr-3 mt-2">•</span>
-                     <span className="text-lg text-black leading-relaxed">
+                     <span className="text-lg text-black leading-relaxed font-roboto">
                        Foster a diverse, equitable, and inclusive culture within IRISEHUB.
                      </span>
                    </li>
                    <li className="flex items-start">
                      <span className="text-black mr-3 mt-2">•</span>
-                     <span className="text-lg text-black leading-relaxed">
+                     <span className="text-lg text-black leading-relaxed font-roboto">
                        Cultivate sustainability leadership and continuous awareness among employees.
                      </span>
                    </li>
                    <li className="flex items-start">
                      <span className="text-black mr-3 mt-2">•</span>
-                     <span className="text-lg text-black leading-relaxed">
+                     <span className="text-lg text-black leading-relaxed font-roboto">
                        Prioritize employee well-being, ethical behavior, and engagement as central to our sustainability mission.
                      </span>
                    </li>
                    <li className="flex items-start">
                      <span className="text-black mr-3 mt-2">•</span>
-                     <span className="text-lg text-black leading-relaxed">
+                     <span className="text-lg text-black leading-relaxed font-roboto">
                        Provide a safe workplace for our colleagues and contractors.
                      </span>
                    </li>
@@ -386,125 +357,30 @@ function AreasWeFocus() {
            
                        {/* Content Section */}
             <div className="max-w-4xl mx-auto text-left animate-on-scroll">
-              <p className="text-2xl font-bold text-black mb-6">
+              <p className="text-2xl font-bold text-black mb-6 font-roboto">
                 At IRISEHUB, we lead boldly through a pragmatic yet innovative approach turning sustainability into a powerful engine for long-term growth, meaningful value creation, and lasting positive impact.
               </p>
-              <p className="text-lg font-bold text-black">
+              <p className="text-lg font-bold text-black font-roboto">
                 Together, Driving Sustainable Growth.
               </p>
             </div>
          </div>
        </section>
 
-                           {/* Footer */}
-        <footer className="bg-white text-black py-16 px-8">
-          <div className="container mx-auto">
-            {/* Top Section */}
-            <div className="grid md:grid-cols-2 gap-12 mb-12">
-              {/* Left Section - Logo and Address */}
-              <div className="relative">
-                                 <div className="bg-gray-100 p-8 rounded-lg relative">
-                   <h3 className="text-2xl font-bold mb-4">IRISEHUB</h3>
-                   <p className="text-gray-600 mb-4">Université Mohammed VI polytechnique, lot 660, Hay Moulay Rachid, Ben Guerir</p>
-                  <button className="flex items-center space-x-2 bg-white px-4 py-2 rounded-lg border border-gray-300">
-                    <span>📍</span>
-                    <span className="font-medium">GOOGLE MAP</span>
-                  </button>
-                </div>
-              </div>
-              
-              {/* Right Section - Mission Statement */}
-              <div>
-                <h4 className="text-2xl font-bold mb-4">Pioneering next industries.</h4>
-                                 <p className="text-gray-600 leading-relaxed">
-                   At IRISEHUB, we build and scale next-generation businesses and industrial ecosystems to catalyse sustainable growth and innovation across Morocco, Africa, and beyond.
-                 </p>
-              </div>
-            </div>
-            
-            {/* Bottom Section */}
-            <div className="grid md:grid-cols-4 gap-8">
-              {/* Social Media Section */}
-              <div className="flex items-center space-x-4">
-                <div className="flex space-x-3">
-                  <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
-                    <span className="text-sm font-medium">in</span>
-                  </div>
-                  <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
-                    <span className="text-sm font-medium">X</span>
-                  </div>
-                  <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
-                    <span className="text-sm">📷</span>
-                  </div>
-                  <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
-                    <span className="text-sm">▶</span>
-                  </div>
-                </div>
-                <span className="font-medium">Follow us</span>
-              </div>
-              
-              {/* Navigation Links - Left Column */}
-              <div>
-                <ul className="space-y-2">
-                  <li><a href="#" className="hover:text-gray-600">About</a></li>
-                  <li><a href="#" className="hover:text-gray-600">Businesses</a></li>
-                  <li><a href="#" className="hover:text-gray-600">Investment</a></li>
-                  <li><a href="#" className="hover:text-gray-600">Sustainability</a></li>
-                  <li><a href="#" className="hover:text-gray-600">Contact us</a></li>
-                </ul>
-              </div>
-              
-              {/* Categories - Right Column */}
-              <div>
-                <ul className="space-y-2">
-                  <li className="flex items-center space-x-2">
-                    <span>💧</span>
-                    <a href="#" className="hover:text-gray-600">Agriculture & Water</a>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <span>🌪️</span>
-                    <a href="#" className="hover:text-gray-600">Energy</a>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <span>⚛️</span>
-                    <a href="#" className="hover:text-gray-600">Chemicals</a>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <span>🌍</span>
-                    <a href="#" className="hover:text-gray-600">Others</a>
-                  </li>
-                </ul>
-              </div>
-              
-              {/* General Links */}
-              <div>
-                <ul className="space-y-2">
-                  <li><a href="#" className="hover:text-gray-600">Careers</a></li>
-                  <li><a href="#" className="hover:text-gray-600">Newsroom</a></li>
-                  <li><a href="#" className="hover:text-gray-600">Documents</a></li>
-                  <li><a href="#" className="hover:text-gray-600">Privacy policy</a></li>
-                </ul>
-              </div>
-            </div>
-            
-            {/* Copyright */}
-            <div className="border-t border-gray-200 mt-12 pt-8 text-center">
-                             <p className="text-gray-500">2025. IRISEHUB. All Rights Reserved.</p>
-            </div>
-          </div>
-        </footer>
+                                 {/* Footer Component */}
+      <Footer />
 
              {/* Careers Section */}
        <section className="relative h-screen bg-cover bg-center" style={{backgroundImage: "url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"}}>
          <div className="absolute inset-0 bg-black/50"></div>
                    <div className="relative h-full flex flex-col items-center justify-center">
-            <h2 className="text-8xl font-bold text-white mb-12 animate-on-scroll">Careers</h2>
-            <button className="flex items-center space-x-3 bg-gray-200 text-black px-8 py-4 rounded-lg hover:bg-white transition-colors animate-on-scroll">
-              <span className="font-medium">DISCOVER</span>
-              <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center">
-                <HiArrowSmRight className="text-white text-sm" />
+            <h2 className="text-8xl font-bold text-white mb-12 animate-on-scroll font-roboto">Community</h2>
+            <Link to="/community" className="flex items-center space-x-3 bg-black text-white px-8 py-4 rounded-full hover:bg-black transition-colors animate-on-scroll group">
+              <span className="font-medium font-roboto">DISCOVER</span>
+              <div className="w-8 h-8 bg-white group-hover:bg-black group-hover:border-2 group-hover:border-white rounded-full flex items-center justify-center transition-all">
+                <HiArrowSmRight className="text-black group-hover:text-white text-lg transition-colors" />
               </div>
-            </button>
+            </Link>
           </div>
        </section>
     </div>
