@@ -174,7 +174,7 @@ function Ecosystem() {
             <div
               key={company.id}
               ref={(el) => (cardRefs.current[index] = el)}
-              className="bg-white rounded-xl shadow p-6 flex flex-col justify-between transition-all duration-700 transform opacity-0 translate-y-8 hover:scale-105"
+              className="bg-white rounded-xl shadow p-6 flex flex-col justify-between transition-all duration-700 transform opacity-0 translate-y-8 hover:scale-105" //Halkan waye madaxa single box
             >
               <div className="flex items-start mb-4">
                 <div className="w-[90px] h-[90px] bg-white border mr-4 overflow-hidden flex items-center justify-center">

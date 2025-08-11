@@ -5,9 +5,10 @@ function SectionOne (){
         <div className="w-[700px] rounded-xl ml-35 mt-10 overflow-hidden ">
             <img className=" w-full h-full object-cover transition-all duration-300 ease-in-out hover:scale-110" src={Image1} alt="" />
         </div>
-        <h1 className="text-[35px] font-bold ml-35 w-[600px]"> At INNOVX, we acquire and invest in startups and businesses through our specialized investment vehicles, providing the support and resources they need to thrive. </h1>
-        <p> We invest directly in businesses across our three priority sectors, taking equity stakes so that we can maximise our impact and help businesses scale and grow. We also do greenfield investment, creating and developing new operations from the ground up.
-        We invest via our specialist funds such as BIDRA, UM6P and Seedbox and our objective is to develop high-performing businesses in agriculture, energy and chemicals that power sustainable growth and enable technology advancement. </p>
+        <div className="ml-60 w-[800px] mt-20">
+            <h1 className="text-[28px] leading-[35px] font-bold  "> At INNOVX, we acquire and invest in startups and businesses through our specialized investment vehicles, providing the support and resources they need to thrive. </h1>
+            <p className="mt-5"> We invest directly in businesses across our three priority sectors, taking equity stakes so that we can maximise our impact and help businesses scale and grow. <br /> <br />We also do greenfield investment, creating and developing new operations from the ground up. We invest via our specialist funds such as BIDRA, UM6P and Seedbox and our objective is to develop high-performing businesses in agriculture, energy and chemicals that power sustainable growth and enable technology advancement. </p>
+        </div>
     </div>
 }
 export default SectionOne

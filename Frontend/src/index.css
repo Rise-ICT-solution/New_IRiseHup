@@ -16,4 +16,18 @@
     .primaryBtnArrayIcon {
       @apply w-10 h-10   group-hover:border-2  absolute right-2 rounded-full flex items-center  text-[25px] justify-center
     }
+    
+    .ScrollEvents{
+      display: flex;
+    animation: scrollevent 20s linear infinite;
+    } 
+    @keyframes scrollevent {
+        0%
+        {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
   }
