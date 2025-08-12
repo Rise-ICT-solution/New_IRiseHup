@@ -9,14 +9,26 @@ import { useState } from "react";
 import { PiCaretDownBold } from "react-icons/pi";
 import { PiCaretUpBold } from "react-icons/pi";
 import { HiBars3BottomRight } from "react-icons/hi2";
+import { VscChromeClose } from "react-icons/vsc";
+
 
 
 function Header () {
     const [isHoverItem, setIsHoverItem] = useState(null)
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen((open) => !open);
+    };
     return <div className="w-full relative">
-        <div className=" w-full bg-transparent z-10 absolute h-[90px] flex justify-between items-center px-[20px] md:px-[30px]">
-            <Link to="/"><img className="w-[150px] filter invert brightness-0 " src={iRisehupLogo} alt="" /></Link>
-            <ul className="md:hidden lg:flex hidden gap-10 text-xl  font-semibold text-white">
+        <div className={` ${isMenuOpen ? "bg-white  h-screen fixed  text-black px-0 flex-col" : "bg-tranparent"} w-full  z-10 absolute h-[90px] flex justify-between items-center px-[10px] md:px-[30px]`}>
+            <div className="flex items-center justify-between top-4 left-4 ">
+                <Link to="/"><img className={` ${isMenuOpen ? "  " : "filter invert brightness-0"} w-[150px]  `} src={iRisehupLogo} alt="" /></Link>
+                 <button onClick={toggleMenu} className="lg:hidden md:text-5xl absolute right-4 top-4 text-4xl text-black">
+                    {isMenuOpen ? <VscChromeClose /> : <HiBars3BottomRight className="text-white" />}
+                </button>
+            </div>
+            <ul className={` ${isMenuOpen ? "block text-black" : "hidden text-white"} md:hidden lg:flex  gap-10 text-xl  font-semibold `}>
                 {/* About Sub menues */}
                 <div className="relative" onMouseEnter={() => setIsHoverItem("about")} onMouseLeave={() => setIsHoverItem(null)}>
                     <Link to="/about"> <li className="items-center flex gap-1 mb-2"> About  <PiCaretDownBold className={`${isHoverItem === "about" ? "rotate-180 transition-transform duration-300 ease-in-out" : "rotate-0"}`} /> </li> </Link>
@@ -67,7 +79,7 @@ function Header () {
                 <Link to="/startups"> <li> Startups </li> </Link>
             </ul>
             {/* SOcial media icons */}
-            <div className="md:hidden lg:flex hidden gap-5 items-center">
+            <div className={` ${ isMenuOpen ? "flex " : "hidden"} md:hidden lg:flex  gap-5 items-center`}>
                 <div className="w-[30px] h-[30px]  text-black hover:text-white flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-125 overflow-hidden bg-white hover:bg-black rounded-full group"> 
                     <FaLinkedinIn  className="text-[17px] transition-transform duration-300 ease-in-out "/> 
                 </div>
@@ -81,7 +93,7 @@ function Header () {
                     <FaFacebookF  className="text-[17px] transition-transform duration-300 ease-in-out "/> 
                 </div>
             </div>
-            <HiBars3BottomRight className="lg:hidden md:text-5xl text-4xl text-white" />
+           
         </div>
     </div>
 }
