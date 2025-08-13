@@ -8,7 +8,11 @@ import AreasWeFocus from "./Pages/AreasWeFocus"
 import Dashboard from "./Pages/Dashboard"
 import AllPosts from "./Pages/Dashboard/AllPosts"
 import CreatePost from "./Pages/Dashboard/CreatePost"
+
+export const backendUrl = import.meta.env.VITE_BACKEND_URL
+
 function App (){
+
   return <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/ecosystem" element={<Ecosystem />} />

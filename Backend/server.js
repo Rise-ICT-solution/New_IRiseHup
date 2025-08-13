@@ -7,7 +7,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-mongoose.connect("mongodb://localhost:27017/IriseHub").then(()=>{
+mongoose.connect("mongodb://localhost:27017/IriseHub").then(() => {
     console.log("Data has been Connected to MongoDB")
 })
 
@@ -17,7 +17,7 @@ const viewnews = require('./model/viewnewes')
 // multer middleware
 const uploadImage = require('./middleware/multer')
 
-app.post('/add/event', uploadImage.single('images'), async (req,res)=>{
+app.post('/add/event', uploadImage.single('images'), async (req, res) => {
     try {
         const newUpdateEvent = new viewnews({
             title: req.body.title,
@@ -27,12 +27,27 @@ app.post('/add/event', uploadImage.single('images'), async (req,res)=>{
         })
 
         const saveEventUpdates = await newUpdateEvent.save()
-        res.send(saveEventUpdates)
-    } catch (err) {
-        res.status(500).send(err.message)
+        res.json(saveEventUpdates)
+    } catch (error) {
+        res.json({message: error.message})
     }
 })
 
-app.listen(3000,()=>{
+
+// get xogta meesha lagu soo bandhigaayo
+
+app.get('/allEvents', async (req, res) => {
+    try {
+        const getEvents = await viewnews.find()
+        if (getEvents) {
+            res.json(getEvents)
+        }
+    } catch (error) {
+        res.json({message: error.message})
+    }
+
+})
+
+app.listen(3000, () => {
     console.log('Server is listening on port 3000');
 })

@@ -1,33 +1,84 @@
+import { useState } from 'react';
+import axios from 'axios'
+import {toast} from 'react-toastify'
+import {ToastContainer} from 'react-toastify'
+
+import { backendUrl } from '../../App';
+
 function CreatePost (){
+
+
+    const [title, setTitle] = useState('')
+    const [discription, setDiscription] = useState('')
+    const [data, setData] = useState('')
+    const [images, setImages] = useState([])
+
+
+    const handleSabmit = async (e)=>{
+        e.preventDefault()
+
+        try {
+            const formData = new FormData()
+
+            formData.append('title', title)
+            formData.append('discription', discription)
+            formData.append('data', data)
+            formData.append('images', images)
+
+            const response = await axios.post(backendUrl + "/add/event",formData)
+            if (response.data) {
+                toast.success("Post created successfully!")
+                setTitle('')
+                setDiscription('')
+                setData('')
+                setImages(null)
+            }else{
+                toast.error(response.data.message || "Something went wrong")
+            }
+        } catch (error) {
+            console.log(error);
+            toast.error(error.message)
+            
+        }
+    }
+
+
+
     return <div className="">
         <h1 className=" font-semibold text-[20px]"> Create Post </h1>
+        <form onSubmit={handleSabmit}>
+            
         <div className="w-[600px] px-[20px] pt-5 h-[450px] bg-white rounded-md">
             <div className="flex flex-col">
                 <label> Title </label>
-                <input className="border-[1.5px] px-2 w-full h-[37px] mt-1 rounded-md border-gray-400" type="text"  placeholder=""/>
+                <input value={title} onChange={(e)=>setTitle(e.target.value)} className="border-[1.5px] px-2 w-full h-[37px] mt-1 rounded-md border-gray-400" type="text"  placeholder=""/>
             </div>
             <div className="flex justify-between   mt-3">
                 <div className="flex flex-col ">
                     <label> Higlight </label>
-                    <input className="border-[1.5px] px-2 w-[250px] h-[37px] mt-1 rounded-md border-gray-400" type="text"  placeholder=""/>
+                    <input  className="border-[1.5px] px-2 w-[250px] h-[37px] mt-1 rounded-md border-gray-400" type="text"  placeholder=""/>
                 </div>
                 <div className="flex flex-col ">
                     <label> Date </label>
-                    <input className="border-[1.5px] w-[250px] h-[37px] mt-1 rounded-md border-gray-400 px-2" type="date"  placeholder=""/>
+                    <input  value={data} onChange={(e)=>setData(e.target.value)} className="border-[1.5px] w-[250px] h-[37px] mt-1 rounded-md border-gray-400 px-2" type="date"  placeholder=""/>
                 </div>
                 
             </div>
             <div className="flex flex-col mt-3">
                 <label> Image </label>
-                <input className="border-[1.5px] px-2 w-full h-[37px] mt-1 rounded-md border-gray-400 p-[6px]" type="file"  placeholder=""/>
+                <input  onChange={(e)=>setImages(e.target.files[0])} className="border-[1.5px] px-2 w-full h-[37px] mt-1 rounded-md border-gray-400 p-[6px]" type="file"  placeholder=""/>
             </div>
             <div className="flex flex-col mt-3">
                 <label> Description </label>
-                <textarea className="border-[1.5px] px-2 w-full h-[100px] mt-1 rounded-md border-gray-400" type="text"  placeholder=""/>
+                <textarea value={discription} onChange={(e)=>setDiscription(e.target.value)} className="border-[1.5px] px-2 w-full h-[100px] mt-1 rounded-md border-gray-400" type="text"  placeholder=""/>
             </div>
             <button className="bg-black text-white w-full h-[40px] mt-3 rounded-md"> Post </button>
 
         </div>
+
+        </form>
+     <ToastContainer />
+
 
     </div>
 }
