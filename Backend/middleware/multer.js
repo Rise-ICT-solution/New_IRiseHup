@@ -1,4 +1,6 @@
 const multer = require('multer');
+const express = require('express');
+
 
 const imageLocation = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -8,6 +10,8 @@ const imageLocation = multer.diskStorage({
     cb(null, file.originalname);
   }
 });
+
+
 
 const uploadImage = multer({ storage: imageLocation });
 

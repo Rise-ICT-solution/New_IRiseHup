@@ -9,8 +9,7 @@ import Dashboard from "./Pages/Dashboard"
 import AllPosts from "./Pages/Dashboard/AllPosts"
 import CreatePost from "./Pages/Dashboard/CreatePost"
 
-export const backendUrl = import.meta.env.VITE_BACKEND_URL
-
+export const backendUrl = import.meta.env.VITE_BACKEND_URL= "http://localhost:3000"
 function App (){
 
   return <Routes>

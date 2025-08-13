@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 
+
 const app = express()
 
 app.use(express.json())
@@ -16,6 +17,9 @@ const viewnews = require('./model/viewnewes')
 
 // multer middleware
 const uploadImage = require('./middleware/multer')
+
+app.use('/images', express.static('images'));
+
 
 app.post('/add/event', uploadImage.single('images'), async (req, res) => {
     try {
