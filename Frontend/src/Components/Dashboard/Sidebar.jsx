@@ -4,7 +4,7 @@ import { FaRegUserCircle } from "react-icons/fa";
 import { MdOutlineCreateNewFolder } from "react-icons/md";
 import { Link } from "react-router-dom";
 function Sidebar (){
-    return <div className="bg-[#0A1114] flex flex-col pt-5 w-[20%] h-screen">
+    return <div className="bg-[#0A1114] flex flex-col pt-5 h-screen">
         <div className="flex flex-col items-center">
             <FaRegUserCircle className="text-white text-[50px]" />
         <div className="text-white text-center mt-5">

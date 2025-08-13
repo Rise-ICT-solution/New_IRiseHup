@@ -7,7 +7,7 @@ import Startups from "./Pages/StartUps"
 import AreasWeFocus from "./Pages/AreasWeFocus"
 import Dashboard from "./Pages/Dashboard"
 import AllPosts from "./Pages/Dashboard/AllPosts"
-import CreatePost from "./Pages/Dashboard/CreatePost"
+import CreatePost from "./Pages/Dashboard/"
 function App (){
   return <Routes>
     <Route path="/" element={<Home />} />
