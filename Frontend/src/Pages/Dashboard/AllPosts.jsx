@@ -1,5 +1,5 @@
 import SinglePost from "../../Components/Dashboard/SinglePost";
-import Sidebar from "../Components/Dashboard/Sidebar";
+import Sidebar from "../../Components//Dashboard/Sidebar";
 
 function AllPosts (){
     return <div className="w-full h-screen bg-gray-200 flex">
