@@ -4,6 +4,7 @@ import {toast} from 'react-toastify'
 import {ToastContainer} from 'react-toastify'
 
 import { backendUrl } from '../../App';
+import Sidebar from '../../Components/Dashboard/Sidebar';
 
 function CreatePost (){
 
@@ -11,6 +12,7 @@ function CreatePost (){
     const [title, setTitle] = useState('')
     const [discription, setDiscription] = useState('')
     const [data, setData] = useState('')
+    const [highlight, setHighlight] = useState('')
     const [images, setImages] = useState([])
 
 
@@ -24,6 +26,7 @@ function CreatePost (){
             formData.append('discription', discription)
             formData.append('data', data)
             formData.append('images', images)
+            formData.append('Highlight', highlight)
 
             const response = await axios.post(backendUrl + "/add/event",formData)
             if (response.data) {
@@ -32,6 +35,8 @@ function CreatePost (){
                 setDiscription('')
                 setData('')
                 setImages(null)
+                setHighlight('')
+
             }else{
                 toast.error(response.data.message || "Something went wrong")
             }
@@ -44,7 +49,13 @@ function CreatePost (){
 
 
 
-    return <div className="">
+    return <div className=" w-full min-h-screen bg-gray-200   flex ">
+        <div className=" w-[18%] h-screen fixed left-0 top-0 ">
+      <Sidebar />
+    </div>
+    <div className='ml-[18%] flex flex-col items-center   pt-10 pb-10 w-[82%] p-5'>
+
+   
         <h1 className=" font-semibold text-[20px]"> Create Post </h1>
         <form onSubmit={handleSabmit}>
             
@@ -56,7 +67,7 @@ function CreatePost (){
             <div className="flex justify-between   mt-3">
                 <div className="flex flex-col ">
                     <label> Higlight </label>
-                    <input  className="border-[1.5px] px-2 w-[250px] h-[37px] mt-1 rounded-md border-gray-400" type="text"  placeholder=""/>
+                    <input value={highlight} onChange={(e) => setHighlight(e.target.value)}  className="border-[1.5px] px-2 w-[250px] h-[37px] mt-1 rounded-md border-gray-400" type="text"  placeholder=""/>
                 </div>
                 <div className="flex flex-col ">
                     <label> Date </label>
@@ -80,6 +91,7 @@ function CreatePost (){
      <ToastContainer />
 
 
+    </div>
     </div>
 }
 export default CreatePost;

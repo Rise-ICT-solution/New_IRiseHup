@@ -31,14 +31,16 @@ function AllPosts() {
     </div>
     <div className="ml-[18%] flex flex-col items-center overflow-y-auto min-h-screen pt-10 pb-10 w-[82%] p-5">
       <h1 className="font-semibold text-[25px] mb-5"> All Posts </h1>
+      <div className="grid grid-cols-3 gap-6">
       {getEvents.map(event => (
         <div key={event._id} className="bg-white p-4 rounded shadow-md w-[300px]">
           <h2 className="font-bold text-lg">{event.title}</h2>
           <img src={`${backendUrl}/images/${event.images}`} alt={event.title} className="w-full h-48 object-cover mt-2" />
-          <p className="mt-2">{event.discription}</p>
+          <p className="mt-2"> {event.discription.substring(0, 100)}... </p>
           <p className="text-sm text-gray-500 mt-1">Date: {event.data}</p>
         </div>
       ))}
+      </div>
     </div>
 
   </div>

@@ -27,7 +27,8 @@ app.post('/add/event', uploadImage.single('images'), async (req, res) => {
             title: req.body.title,
             discription: req.body.discription,
             images: req.file.filename,
-            data: req.body.data
+            data: req.body.data,
+            Highlight: req.body.Highlight
         })
 
         const saveEventUpdates = await newUpdateEvent.save()

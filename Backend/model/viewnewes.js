@@ -16,6 +16,10 @@ const EventSchema = new mongoose.Schema({
   data: {
     type: String,
     required: true,
+  },
+  Highlight: {
+    type: String,
+    required: true,
   }
 });
 
