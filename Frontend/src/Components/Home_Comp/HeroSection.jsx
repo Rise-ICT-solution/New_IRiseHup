@@ -31,8 +31,8 @@ function HeroSection (){
             <img className="w-full h-full transition-all duration-300 ease-in-out object-cover" src={HeroSectionImages[index]} alt="" />
             <div className="w-full h-full object-cover bg-black/10 top-0 absolute"></div>
         <div className="w-[600px] z-1 absolute top-40">
-            <h1 className="text-[80px] text-white font-bold leading-[100px] "> Pioneering next industries </h1>
-            <p className="text-[22px] text-white  mt-5"> iRisehub is a community of disruptors and dreamers, fostering innovation, entrepreneurship, and technology to build a thriving future for Somalia </p>
+            <h1 className="text-[80px] text-white font-bold leading-[100px] ">Somali's Innovation Hub</h1>
+            <p className="text-[22px] text-white  mt-5"> A home to learn, share ideas, explore business and investment opportunities, and shape the countries’ economic ecosystem. </p>
             <button className="primaryBtn bg-white mt-5 group "> Play Video 
                 <div className="primaryBtnArrayIcon bg-black border-black group-hover:text-black text-white group-hover:bg-transparent"> <HiArrowSmRight /> </div> 
             </button>
