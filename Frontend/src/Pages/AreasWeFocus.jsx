@@ -110,7 +110,7 @@ function AreasWeFocus() {
              {/* Vision Statement */}
              <div className="max-w-lg animate-on-scroll">
                <p className="text-lg font-normal text-black leading-relaxed font-roboto">
-                 Our vision ensures that IRISEHUB and its ventures align with the highest Environmental, Social, and Governance (ESG) standards, driving long-term value and sustainable growth.
+               iRise Hub envisions a Somalia where youth are empowered with the tools to unlock their potential and shape a prosperous future for the nation and beyond
                </p>
              </div>
           </div>

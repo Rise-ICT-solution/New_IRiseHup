@@ -32,7 +32,7 @@ function Footer (){
                 {/* Right */}
                 <div className="w-full relative">
                     <h3 className="text-[20px] font-semibold "> Pioneering next industries. </h3>
-                    <h1 className="mt-10 text-gray-600"> At INNOVX, we build and scale next-generation businesses and industrial ecosystems to catalyse sustainable growth and innovation across Morocco, Africa, and beyond.</h1>
+                    <h1 className="mt-10 text-gray-600"> At iRise Hub, we build and scale next-generation businesses and industrial ecosystems to catalyse sustainable growth and innovation across Somalia, Africa, and beyond.</h1>
                     <div className="flex justify-between text-gray-800 gap-0 absolute w-full bottom-0">
                         <ul className="leading-[35px]">
                             <li className="hover:border-b-[1.5px] hover:border-b-black"> About </li>

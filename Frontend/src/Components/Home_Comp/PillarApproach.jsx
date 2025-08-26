@@ -9,20 +9,20 @@ function PillarApproach(){
     const Data = [
         {
             Image: Hero2, 
-            Title : "Build Thriving Businesses",
-            Desc : "We are a group of passionate individuals, experts, and creatives working together to create transformative solutions for the world's most challenging problems.", 
+            Title : "Technology",
+            Desc : "We believe digital growth comes through collaboration and smart use of technology", 
             Link : "#"
         },
         {
             Image: Hero4, 
-            Title : "Invest in Innovation",
-            Desc : "We are a group of passionate individuals, experts, and creatives working together to create transformative solutions for the world's most challenging problems.", 
+            Title : "Innovation",
+            Desc : "We foster innovation through a think-outside-the-box mindset.", 
             Link : "#"
         },
         {
             Image: Hero6, 
-            Title : "Develop Ecosystem",
-            Desc : "We are a group of passionate individuals, experts, and creatives working together to create transformative solutions for the world's most challenging problems.", 
+            Title : "Diversity",
+            Desc : "We welcome everyone on this journey, with no discrimination.", 
             Link : ""
         },
     ]

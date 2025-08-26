@@ -10,8 +10,8 @@ function Sectors() {
     const Section3 = [
         {
             Image : Solar,
-            Title : "Energy",
-            Desc : "Pioneering businesses and ecosystems for a sustainable energy future",
+            Title : "Technology",
+            Desc : "We believe digital growth comes through collaboration and smart use of technology",
             Link : "#",
         },
         {
@@ -45,7 +45,7 @@ function Sectors() {
         <div class="mask-b-from-50% mask-radial-[50%_90%] mask-radial-from-80% bg-green-500/50 -mt-40 ml-30 absolute -z-10 w-[500px] h-[500px] "></div>
         <div className="w-[550px] ml-50">
             <p className="text-[20px] text-gray-600  font-semibold"> Our Impact SO Far </p>
-            <h1 className="text-[28px] font-semibold mt-4"> So far we have launched over 30 projects across three strategic sectors critical to food sovereignty, energy, and chemicals. </h1>
+            <h1 className="text-[28px] font-semibold mt-4"> We're more than a tech hub — we're a vibrant community of innovators, entrepreneurs, students, officials, and SMEs tackling Somalia’s socio-economic challenges. </h1>
         </div>
         {/* Section Two */}
         <div className="w-full mt-20 relative flex flex-col items-center h-[600px]">
